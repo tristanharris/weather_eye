@@ -21,5 +21,12 @@ class WeatherEye
       yield sample
     end
   end
+
+  def back_to(time)
+    each do |sample|
+      break if sample.time <= time
+      yield sample
+    end
+  end
 end
 
