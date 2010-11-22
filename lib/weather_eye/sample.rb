@@ -54,6 +54,10 @@
       end
     end
 
+    def to_h
+      ATTRS.inject({}){|h, a| h[a] = instance_variable_get("@#{a}");h}
+    end
+
   end
 
 
