@@ -53,7 +53,7 @@
       ATTRS.each do |a|
         instance_variable_set "@#{a}", data[a]
       end
-      offset = data[:offset]
+      @offset = data[:offset]
     end
 
     def to_h
